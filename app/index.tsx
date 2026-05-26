@@ -1,8 +1,6 @@
-import CustomComponent from "@/components/CoresComponents/CustomComponent";
-import FlatListComponents from "@/components/CoresComponents/FlatListComponents";
 import { SectionListComponent } from "@/components/CoresComponents/SectionListComponent";
 import { styles } from "@/components/IndexStyles";
-import { View, SafeAreaView } from "react-native";
+import { SafeAreaView, View } from "react-native";
 
 export default function Index() {
   return (
