@@ -1,4 +1,5 @@
 import CustomComponent from "@/components/CoresComponents/CustomComponent";
+import FlatListComponents from "@/components/CoresComponents/FlatListComponents";
 import { styles } from "@/components/IndexStyles";
 import { ScrollView, View } from "react-native";
 import { SafeAreaView } from "react-native";
@@ -45,10 +46,15 @@ export default function Index() {
         <AlertComponent />
       </View> */}
 
-      {/* React Native - CustomComponent */}
-      <SafeAreaView style={styles.container}>
+      {/* React Native - CustomComponent + SafeAreaView */}
+      {/* <SafeAreaView style={styles.container}>
         <CustomComponent name="Mohamed Fawzzi" age={26} />
-      </SafeAreaView>
+      </SafeAreaView> */}
+
+      {/* React Native - FlatList */}
+      <View style={styles.container}>
+        <FlatListComponents />
+      </View>
     </ScrollView>
   );
 }
