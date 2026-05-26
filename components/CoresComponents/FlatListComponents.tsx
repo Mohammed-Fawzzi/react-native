@@ -1,6 +1,6 @@
 import { users } from "@/utils/users";
 import { Button, FlatList, SafeAreaViewBase, Text, View } from "react-native";
-import { User } from "@/types/Users";
+import { User } from "@/types/userTypes";
 
 export default function FlatListComponents() {
     return (

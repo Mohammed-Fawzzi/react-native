@@ -1,14 +1,12 @@
 import CustomComponent from "@/components/CoresComponents/CustomComponent";
 import FlatListComponents from "@/components/CoresComponents/FlatListComponents";
+import { SectionListComponent } from "@/components/CoresComponents/SectionListComponent";
 import { styles } from "@/components/IndexStyles";
-import { ScrollView, View } from "react-native";
-import { SafeAreaView } from "react-native";
+import { View, SafeAreaView } from "react-native";
 
 export default function Index() {
   return (
-    <ScrollView
-      showsVerticalScrollIndicator={false}
-    >
+    <SafeAreaView style={styles.container}>
       {/* React Native - Images */}
       {/* <View style={styles.container}>
         <Images />
@@ -52,9 +50,14 @@ export default function Index() {
       </SafeAreaView> */}
 
       {/* React Native - FlatList */}
-      <View style={styles.container}>
+      {/* <View style={styles.container}>
         <FlatListComponents />
+      </View> */}
+
+      {/* React Native - SectionList */}
+      <View style={styles.container}>
+        <SectionListComponent />
       </View>
-    </ScrollView>
+    </SafeAreaView>
   );
 }
