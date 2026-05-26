@@ -1,10 +1,7 @@
-import Buttons from "@/components/CoresComponents/Buttons";
-import Images from "@/components/CoresComponents/Images";
-import Modals from "@/components/CoresComponents/Modals";
-import PressableComponent from "@/components/CoresComponents/PressableComponent";
-import StatusBarComponent from "@/components/CoresComponents/StatusBarComponent";
+import CustomComponent from "@/components/CoresComponents/CustomComponent";
 import { styles } from "@/components/IndexStyles";
-import { ScrollView, Text, View } from "react-native";
+import { ScrollView, View } from "react-native";
+import { SafeAreaView } from "react-native";
 
 export default function Index() {
   return (
@@ -34,9 +31,24 @@ export default function Index() {
       </View> */}
 
       {/* React Native - StatusBar */}
-      <View style={styles.container}>
+      {/* <View style={styles.container}>
         <StatusBarComponent />
-      </View>
+      </View> */}
+
+      {/* React Native - ActivityIndicatorComp */}
+      {/* <View style={styles.container}>
+        <ActivityIndicatorComp />
+      </View> */}
+
+      {/* React Native - AlertComponent */}
+      {/* <View style={styles.container}>
+        <AlertComponent />
+      </View> */}
+
+      {/* React Native - CustomComponent */}
+      <SafeAreaView style={styles.container}>
+        <CustomComponent name="Mohamed Fawzzi" age={26} />
+      </SafeAreaView>
     </ScrollView>
   );
 }
