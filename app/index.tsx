@@ -1,4 +1,6 @@
+import InputComponents from "@/components/CoresComponents/InputComponents";
 import { SectionListComponent } from "@/components/CoresComponents/SectionListComponent";
+import SwitchComponents from "@/components/CoresComponents/SwitchComponents";
 import { styles } from "@/components/IndexStyles";
 import { SafeAreaView, View } from "react-native";
 
@@ -53,8 +55,18 @@ export default function Index() {
       </View> */}
 
       {/* React Native - SectionList */}
-      <View style={styles.container}>
+      {/* <View style={styles.container}>
         <SectionListComponent />
+      </View> */}
+
+      {/* React Native - InputComponents */}
+      {/* <View style={styles.container}>
+        <InputComponents />
+      </View> */}
+
+      {/* React Native - SwitchComponents */}
+      <View style={styles.container}>
+        <SwitchComponents />
       </View>
     </SafeAreaView>
   );
