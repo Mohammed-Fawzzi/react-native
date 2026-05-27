@@ -1,3 +1,4 @@
+import FormComponents from "@/components/CoresComponents/FormComponents";
 import InputComponents from "@/components/CoresComponents/InputComponents";
 import { SectionListComponent } from "@/components/CoresComponents/SectionListComponent";
 import SwitchComponents from "@/components/CoresComponents/SwitchComponents";
@@ -65,8 +66,13 @@ export default function Index() {
       </View> */}
 
       {/* React Native - SwitchComponents */}
-      <View style={styles.container}>
+      {/* <View style={styles.container}>
         <SwitchComponents />
+      </View> */}
+
+      {/* React Native - FormComponents */}
+      <View style={styles.container}>
+        <FormComponents />
       </View>
     </SafeAreaView>
   );
