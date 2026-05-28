@@ -3,6 +3,7 @@ import InputComponents from "@/components/CoresComponents/InputComponents";
 import { SectionListComponent } from "@/components/CoresComponents/SectionListComponent";
 import SwitchComponents from "@/components/CoresComponents/SwitchComponents";
 import { styles } from "@/components/IndexStyles";
+import Posts from "@/Screens/Posts";
 import { SafeAreaView, View } from "react-native";
 
 export default function Index() {
@@ -71,8 +72,13 @@ export default function Index() {
       </View> */}
 
       {/* React Native - FormComponents */}
-      <View style={styles.container}>
+      {/* <View style={styles.container}>
         <FormComponents />
+      </View> */}
+
+      {/* React Native - FormComponents */}
+      <View style={styles.container}>
+        <Posts />
       </View>
     </SafeAreaView>
   );
