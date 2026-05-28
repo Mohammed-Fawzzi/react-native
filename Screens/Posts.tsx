@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { Button } from "react-native";
 import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from "react-native";
 
-export default function Posts() {
+export default function Posts({ navigation }: any) {
     const {
         posts,
         fetchPosts,
@@ -17,6 +17,7 @@ export default function Posts() {
         setBody,
         addPost,
     } = usePosts();
+
 
     useEffect(() => {
         fetchPosts();
@@ -36,6 +37,7 @@ export default function Posts() {
             contentContainerStyle={styles.contentContainer}
             showsVerticalScrollIndicator={false}
         >
+            <Button title="Switch Components" onPress={() => navigation.navigate("SwitchComponents")} />
             <AddPostForm
                 title={title}
                 setTitle={setTitle}
