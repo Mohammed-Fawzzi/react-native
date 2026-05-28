@@ -1,13 +1,30 @@
+import AddPostForm from "@/components/AddPostForm";
 import usePosts from "@/hooks/usePosts";
 import { useEffect } from "react";
+import { Button } from "react-native";
 import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from "react-native";
 
 export default function Posts() {
-    const { posts, fetchPosts, loading } = usePosts();
+    const {
+        posts,
+        fetchPosts,
+        loading,
+        page,
+        setPage,
+        title,
+        setTitle,
+        body,
+        setBody,
+        addPost,
+    } = usePosts();
 
     useEffect(() => {
         fetchPosts();
-    }, []);
+    }, [page]);
+
+    const handleLoadMore = () => {
+        setPage(prevPage => prevPage + 1);
+    };
 
     if (loading) {
         return <ActivityIndicator size="large" color="#2020aa" />;
@@ -19,6 +36,13 @@ export default function Posts() {
             contentContainerStyle={styles.contentContainer}
             showsVerticalScrollIndicator={false}
         >
+            <AddPostForm
+                title={title}
+                setTitle={setTitle}
+                body={body}
+                setBody={setBody}
+                addPost={addPost}
+            />
             {posts.map((post: any) => (
                 <View key={post.id} style={styles.card}>
                     <Text style={styles.title}>
@@ -29,6 +53,8 @@ export default function Posts() {
                     </Text>
                 </View>
             ))}
+
+            <Button title="Load More" onPress={handleLoadMore} />
         </ScrollView>
     );
 }
